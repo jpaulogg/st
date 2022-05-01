@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:pixelsize=15:antialias=true:autohint=true";
+static char *font = "Noto Sans Mono:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 4;
 
 /*
@@ -184,8 +184,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
+#define MODKEY (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -196,8 +195,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_equal,       zoom,           {.f = +1} },
 	{ MODKEY,               XK_minus,       zoom,           {.f = -1} },
 	{ MODKEY,               XK_Home,        zoomreset,      {.f = 0}  },
-	{ MODKEY|ShiftMask,     XK_Y,           clipcopy,       {.i = 0}  },
-	{ MODKEY|ShiftMask,     XK_P,           clippaste,      {.i = 0}  },
+	{ MODKEY,               XK_Y,           clipcopy,       {.i = 0}  },
+	{ MODKEY,               XK_P,           clippaste,      {.i = 0}  },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i = 0}  },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i = 0}  },
 };
